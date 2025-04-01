@@ -1,0 +1,21 @@
+.menu-link {
+  a {
+    text-decoration: none; 
+    color: white; 
+  }
+}
+
+// màu nền khi được chọn
+.ant-menu-item-selected {
+  background-color: #E88697 !important; 
+  color: white !important; 
+}
+// đổi màu khi hover
+.ant-menu-item:hover {
+  background-color: rgb(231, 204, 213) !important; 
+}
+
+// màu chữ khi active
+.ant-menu-item-selected a {
+  color: white !important; 
+}

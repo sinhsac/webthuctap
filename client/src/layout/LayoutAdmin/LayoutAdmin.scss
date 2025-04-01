@@ -1,0 +1,39 @@
+.headeradmin{
+    display: flex;
+    border-bottom: 1px solid #edf2f9;
+    background-color: #fff;
+    &__nav{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin:0px 60px;
+    }
+}
+
+.sideradmin{
+    border-right: 1px solid #edf2f9;
+}
+
+.contentadmin{
+    padding:0px 20px;
+    min-height: 600px;
+} 
+.ButtonLogout{
+    margin-left: 20px;
+    background-color: #000;
+    &:hover {
+     background-color: #ffffff !important;
+     color: #000 !important;
+    }
+}
+.ButtonHome{
+   margin-left: 20px;
+    background-color: #fff;
+    color: #000;
+    &:hover {
+     background-color: #000 !important;
+     color: #fff !important;
+    }
+}

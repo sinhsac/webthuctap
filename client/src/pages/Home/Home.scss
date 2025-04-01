@@ -1,0 +1,14 @@
+.viewmore {
+  border: 1px solid #B87209;
+    background-color: #B87209;
+  color: #B87209;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  width: 140px;
+  height: 40px;
+   background-color: #f7f1f3;
+  &:hover {
+    background-color: #B87209;
+    color: white;
+  }
+}
