@@ -19,8 +19,11 @@ app.use("/api/user", userRouter);
 const productRouter = require('./app/routes/ProductRoute');
 app.use("/api/product", productRouter);
 
-// var categoryRouter = require('./app/routes/CategoryRoute')
-// app.use("/api/category", categoryRouter);
+const orderRouter = require('./app/routes/OrderRoute');
+app.use("/api/order", orderRouter);
+
+const categoryRouter = require('./app/routes/CategoryRoute');
+app.use("/api/category", categoryRouter);
 
 app.get('/',(req,res,next)=>{
     res.send("Vui ve");
