@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
-const MONGO_URI = "mongodb://127.0.0.1/ShopDoNoiThat";
-// const MONGO_URI = "mongodb://localhost:27017/ShopDoNoiThat";
+const MONGO_URI = process.env.MONGODB_URI ?? "mongodb://localhost:27017";
 mongoose.Promise = global.Promise;
-const dbconnect = () =>
+const db_connect = () =>
   mongoose
     .connect(MONGO_URI, {})
     .then(() => {
@@ -12,4 +11,4 @@ const dbconnect = () =>
       console.log("Kết nối MongoDB thất bại");
       setTimeout(db_connect, 5000);
     });
-module.exports = { dbconnect };
+module.exports = { db_connect };
