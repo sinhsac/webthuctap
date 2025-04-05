@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const cors = require("cors"); // xử lý dư liệu dạng json
-const { dbconnect } = require("./app/configs/dbConfig");
+const { db_connect } = require("./app/configs/dbConfig");
 
 app.use(express.json()); // để xử lý dạng dữ liệu json
 app.use(express.urlencoded({extended:true})); // để xử lý dữ liệu url encoded
@@ -11,7 +11,7 @@ app.use(cors({credentials:true,origin:"*"})); // chấp thuận cors từ mọi 
 
 const SERVER_PORT = process.env.SERVER_PORT ?? 3002
 
-dbconnect()
+db_connect()
     .then(r => console.log("connect to db success"));
 const userRouter = require('./app/routes/UserRoute');
 app.use("/api/user", userRouter);
